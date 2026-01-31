@@ -8,7 +8,7 @@ interface WeatherAPI {
     @GET("v1/forecast")
     suspend fun getWeather(
         @Query("latitude") lat: Double,
-        @Query("longtitude") lon: Double,
+        @Query("longitude") lon: Double,
         @Query("current_weather") current: Boolean = true,
         @Query("daily") daily: String = "temperature_2m_max,temperature_2m_min",
         @Query("timezone") timezone: String = "auto"
